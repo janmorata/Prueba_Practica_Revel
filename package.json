@@ -1,0 +1,34 @@
+{
+  "name": "playwright-framework-template",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Base limpia para crear frameworks de automatizacion con Playwright y TypeScript.",
+  "scripts": {
+    "test": "playwright test --pass-with-no-tests",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report:generate": "node scripts/run-allure.js generate allure-results --clean -o allure-report",
+    "report:open": "node scripts/run-allure.js open allure-report",
+    "report:serve": "node scripts/run-allure.js serve allure-results",
+    "report:clean": "rimraf allure-results allure-report",
+    "codegen": "playwright codegen",
+    "install:browsers": "playwright install"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "testing",
+    "template"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.15.17",
+    "allure-commandline": "^2.41.0",
+    "allure-playwright": "^3.8.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^6.0.3"
+  }
+}
